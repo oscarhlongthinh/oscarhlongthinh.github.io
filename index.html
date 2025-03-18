@@ -83,6 +83,17 @@
         <div style="margin-top: 20px;">
           <a href="ThinhHuaResume.pdf" download class="download-button">📄 Click Here to Download My Resume</a>
         </div>
+        <div style="margin-top: 20px;">
+          <button class="folder-btn" onclick="toggleProjects(this)">📁 Click to View My Projects</button>
+          <div class="projects" id="projects" style="display: none; margin-top: 10px;">
+            <ul>
+              <li><a href="Boba-flyer.pdf" target="_blank">Cascadia College x Chinese Communication Club</a></li>
+              <li><a href="CCC-Poster.pdf" target="_blank">Chinese Communication Club Poster</a></li>
+              <li><a href="chinese-communication-club-logo.pdf" target="_blank">Chinese Communication Club Logo</a></li>
+              <li><a href="project-stress-commnication-club.pdf" target="_blank">Stress Communication Club Project</a></li>
+            </ul>
+          </div>
+        </div>
     </section>
 
     <!--Experience-->
@@ -209,6 +220,14 @@
       toggleBtn.addEventListener("click", () => {
         navLinks.classList.toggle("show");
       });
+
+      function toggleProjects(button) {
+      const projectDiv = document.getElementById("projects");
+      const isVisible = projectDiv.style.display === "block";
+
+      projectDiv.style.display = isVisible ? "none" : "block";
+      button.innerText = isVisible ? "📁 Click to View My Projects" : "📂 Click to Hide My Projects";
+      }
     </script>
 </body>
 </html>
