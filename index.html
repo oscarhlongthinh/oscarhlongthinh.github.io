@@ -14,7 +14,7 @@
         <h1>Oscar Thinh Long Hua</h1>
         <div class="menu-wrapper">
         <button id="menu-toggle">☰ Menu</button>
-        <nav id="navbar"aria-label="Main Navigation">
+        <nav id="navbar" aria-label="Main Navigation">
             <ul class="nav-links">
                 <li><a href="#Self-introduction">Self Introduction</a></li>
                 <li><a href="#Academic-journey">Academic Journey</a></li>
@@ -204,14 +204,8 @@
       }
 
       const toggleBtn = document.getElementById("menu-toggle");
-      const navbar = document.getElementById("navbar");
-
-      toggleBtn.addEventListener("click", () => {
-        navbar.classList.toggle("show");
-      });
-
-      const toggleBtn = document.getElementById("menu-toggle");
       const navLinks = document.querySelector(".nav-links");
+
       toggleBtn.addEventListener("click", () => {
         navLinks.classList.toggle("show");
       });
