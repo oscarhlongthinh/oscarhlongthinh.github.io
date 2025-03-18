@@ -72,29 +72,31 @@
 
     <!--Why Hire Me-->
     <section id="Why-Hire" class="container">
-        <h2>Why Hire Me?</h2>
+      <h2>Why Hire Me?</h2>
         <ul>
           <li><strong>Technically Proficient:</strong> Knowledgeable in Java, Python, HTML, Adobe Photoshop, and Canva.</li>
-          <li><strong>Versatile Skill Set:</strong> Equipped with experience in customer service, event coordination, graphic design, and basic programming.
-          </li>
+          <li><strong>Versatile Skill Set:</strong> Equipped with experience in customer service, event coordination, graphic design, and basic programming.</li>
           <li><strong>Strong Communicator:</strong> Successfully guided new students, resolved customer concerns, and collaborated with teams to achieve shared goals.</li>
           <li><strong>Bilingual & Culturally Aware:</strong> Fluent in English and Vietnamese, skilled in cross-cultural communication.</li>
         </ul>
-        <div style="margin-top: 20px;">
-          <a href="ThinhHuaResume.pdf" download class="download-button">📄 Click Here to Download My Resume</a>
-        </div>
-        <div style="margin-top: 20px;">
-          <button class="folder-btn" onclick="toggleProjects(this)">📁 Click to View My Projects</button>
-          <div class="projects" id="projects" style="display: none; margin-top: 10px;">
-            <ul>
-              <li><a href="Boba-flyer.pdf" target="_blank">Cascadia College x Chinese Communication Club</a></li>
-              <li><a href="CCC-Poster.pdf" target="_blank">Chinese Communication Club Poster</a></li>
-              <li><a href="chinese-communication-club-logo.pdf" target="_blank">Chinese Communication Club Logo</a></li>
-              <li><a href="project-stress-commnication-club.pdf" target="_blank">Stress Communication Club Project</a></li>
-            </ul>
-          </div>
-        </div>
+
+    <!-- Buttons side by side -->
+    <div class="button-row">
+      <a href="ThinhHuaResume.pdf" download class="download-button">📄 Click Here to Download My Resume</a>
+      <button class="download-button" onclick="toggleProjects(this)">📁 Click to View My Projects</button>
+     </div>
+
+    <!-- Hidden project list -->
+    <div class="projects" id="projects" style="display: none; margin-top: 10px;">
+      <ul>
+        <li><a href="Boba-flyer.pdf" target="_blank">Cascadia College x Chinese Communication Club</a></li>
+        <li><a href="CCC-Poster.pdf" target="_blank">Chinese Communication Club Poster</a></li>
+        <li><a href="chinese-communication-club-logo.pdf" target="_blank">Chinese Communication Club Logo</a></li>
+        <li><a href="project-stress-commnication-club.pdf" target="_blank">Stress Communication Club Project</a></li>
+      </ul>
+    </div>
     </section>
+
 
     <!--Experience-->
     <section id="Experience" class="container">
