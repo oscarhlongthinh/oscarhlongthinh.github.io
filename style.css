@@ -70,22 +70,41 @@ p, ul {
   line-height: 1.6;
 }
 
+/* === Buttons === */
 .download-button {
   display: inline-block;
   background-color: #89CFF0;
   color: black;
-  padding: 10px 16px;
+  padding: 12px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1.4;
   margin-top: 10px;
   transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .download-button:hover {
   background-color: #63bce8;
 }
 
+.download-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007acc;
+}
+
+.button-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* === LinkedIn Button === */
 .linkedin-button {
   display: inline-block;
   background-color: #89CFF0;
@@ -97,6 +116,7 @@ p, ul {
   margin-top: 10px;
 }
 
+/* === Scroll to Top === */
 .scroll-top {
   position: fixed;
   bottom: 30px;
@@ -112,43 +132,7 @@ p, ul {
   transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  #menu-toggle {
-      display: block;
-  }
-
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 10px;
-  }
-
-  .nav-links.show {
-      display: flex;
-  }
-}
-
-/* ----------------------------
- Folder Button + PDF List Styles
------------------------------ */
-
-.folder-btn {
-  background-color: #89CFF0;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.folder-btn:hover {
-  background-color: #89CFF0;
-}
-
+/* === Project List === */
 .projects ul {
   list-style-type: none;
   padding-left: 0;
@@ -167,4 +151,23 @@ p, ul {
 
 .projects a:hover {
   text-decoration: underline;
+}
+
+/* === Responsive Nav === */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
