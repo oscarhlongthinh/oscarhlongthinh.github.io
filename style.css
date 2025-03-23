@@ -30,6 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 header ul {
@@ -249,63 +250,13 @@ header ul li {
     z-index: -1;
 }
 
-/* Hidden menu items initially */
-header input,
-header .navDiv,
-header ul label {
-    display: none;
-}
-
-/* Tablet View */
+/* Show navDiv on mobile/tablet and handle menu */
 @media screen and (max-width: 1024px) {
-    .banner .content h1 {
-        font-size: 2em;
-    }
-
-    .container {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-
-    .banner {
-        grid-template-columns: 1fr;
-    }
-
-    .banner .content {
-        padding-right: 0;
-    }
-
-    .banner .avatar {
-        grid-row-start: 1;
-    }
-}
-.listProject{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    border-bottom: var(--border);
-    padding-bottom: 50px;
-    margin-top: 50px;
-}
-.listProject .item{
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
-}
-.listProject .item img{
-    width: 90%;
-    border-radius: 20px;
-}
-
-/* Mobile View */
-@media screen and (max-width: 767px) {
-    header {
+    header .navDiv {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1001;
     }
 
     header ul.nav {
@@ -317,32 +268,28 @@ header ul label {
         top: 0;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(9, 70px);
+        row-gap: 10px;
         margin: 0;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
-        z-index: 999;
+        z-index: 1000;
         padding: 20px;
+        overflow-y: auto;
     }
 
-    input#menu:checked ~ ul.nav {
+    header ul.nav.open {
         transform: translateX(0);
     }
 
-    header .navDiv {
-        display: flex;
-        justify-content: end;
-        align-items: center;
+    .closeBtn {
+        justify-self: end;
+        font-size: 20px;
+        cursor: pointer;
+        margin-bottom: 10px;
     }
 
-    header label {
-        width: 50px;
-        height: 50px;
-        box-shadow: var(--box-shadow);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    header ul.nav li a {
+        font-size: 14px;
     }
 
     .banner {
@@ -369,5 +316,40 @@ header ul label {
 
     .find ul li a {
         justify-content: center;
+    }
+}
+
+/* Project Section */
+.listProject {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-bottom: var(--border);
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+
+.listProject .item {
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.listProject .item img {
+    width: 90%;
+    border-radius: 20px;
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 480px) {
+    .banner .content h1 {
+        font-size: 1.5em;
+    }
+
+    .listProject {
+        grid-template-columns: 1fr;
     }
 }
