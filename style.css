@@ -1,357 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinh Hua</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 
-:root {
-    --border: 1px solid #dce1e4;
-    --gradient: linear-gradient(-45deg, #D000F7, #24BAE3);
-    --box-shadow: 5px 5px 15px #c1c8d3, -5px -5px 15px #fff;
-}
+<body>
+    <header>
+        <!--ADDED toggle button -->
+        <h1>Oscar Thinh Long Hua</h1>
+        <div class="menu-wrapper">
+        <button id="menu-toggle">☰ Menu</button>
+        <nav id="navbar" aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="#Self-introduction">Self Introduction</a></li>
+                <li><a href="#Academic-journey">Academic Journey</a></li>
+                <li><a href="#Why-Hire">Why Hire Me?</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Future-Goal">Future Goal</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
 
-html {
-    scroll-behavior: smooth;
-}
+    <!--Self intro-->
+    <section id="Self-introduction" class="container">
+        <h2>Self Introduction</h2>
+        <p>Hi my name is Thinh Long Hua,
+          and I am currently pursuing an Associate Degree in Computer Science & Business at Cascadia College.
+          I have a passion for both technology and creative communication,
+          and I enjoy working in environments that allow me to connect with people from different backgrounds.
+        </p>
+        <p>
+          Over the past few years, I’ve gained experience in customer service, event coordination, and graphic design
+          supporting students during orientation to designing promotional materials for campus events.
+          I'm also fluent in English and Vietnamese, which has helped me bridge communication gaps and contribute to diverse teams.
+        </p>
+        <p>
+          I'm a quick learner, a strong team player, and someone who genuinely enjoys helping others.
+          Whether it’s through solving a technical challenge or creating an engaging design, 
+          I aim to make a positive impact wherever I go.
+        </p>
+    </section>
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #eaecee;
-    color: #3c3e41;
-    margin: 0;
-    font-size: 15px;
-}
+    <!--Academic Journey-->
+    <section id="Academic-journey" class="container">
+        <h2>Academic Journey</h2>
+        <p>
+          My academic journey began in Toronto, Canada, where I graduated from John Polanyi Collegiate Institute in 2022. 
+          During high school, I built a strong foundation in communication, teamwork, 
+          and cultural awareness through both classroom learning and extracurricular involvement.
+        </p>
+        <p>
+          In the fall of 2023, I continued my education at Cascadia College in Bothell, Washington, where I’m currently pursuing an Associate Degree
+          in Computer Science & Business (expected graduation: June 2025). This program has allowed me to explore my interests at the intersection of technology and business, 
+          equipping me with skills in programming (Java, Python, HTML), graphic design, and project coordination.
+        </p>
+        <p>
+          Beyond the classroom, I’ve actively contributed to the campus community. 
+          From leading event promotions and creating marketing materials for cultural events,
+          to assisting new student orientation as a bilingual guide,
+          I’ve developed both technical and interpersonal skills. My academic journey has not only deepened my knowledge,
+          but also shaped me into a motivated, collaborative, and globally minded learner.
+        </p>
+    </section>
 
-a {
-    color: #3c3e41;
-    text-decoration: none;
-}
+    <!--Why Hire Me-->
+    <section id="Why-Hire" class="container">
+      <h2>Why Hire Me?</h2>
+        <ul>
+          <li><strong>Technically Proficient:</strong> Knowledgeable in Java, Python, HTML, Adobe Photoshop, and Canva.</li>
+          <li><strong>Versatile Skill Set:</strong> Equipped with experience in customer service, event coordination, graphic design, and basic programming.</li>
+          <li><strong>Strong Communicator:</strong> Successfully guided new students, resolved customer concerns, and collaborated with teams to achieve shared goals.</li>
+          <li><strong>Bilingual & Culturally Aware:</strong> Fluent in English and Vietnamese, skilled in cross-cultural communication.</li>
+        </ul>
 
-header {
-    padding: 10px;
-    width: calc(100% - 20px);
-    border-bottom: var(--border);
-    display: grid;
-    grid-template-columns: 30% 70%;
-    align-items: center;
-}
+    <!-- Buttons side by side -->
+    <div class="button-row">
+      <a href="ThinhHuaResume.pdf" download class="download-button">📄 Click Here to Download My Resume</a>
+      <button class="download-button" onclick="toggleProjects(this)">📁 Click Here to View My Projects</button>
+     </div>
 
-header .logo img {
-    height: 50px;
-}
+    <!-- Hidden project list -->
+    <div class="projects" id="projects" style="display: none; margin-top: 10px;">
+      <ul>
+        <li><a href="Boba-flyer.pdf" target="_blank">Cascadia College x Chinese Communication Club</a></li>
+        <li><a href="CCC-Poster.pdf" target="_blank">Chinese Communication Club Poster</a></li>
+        <li><a href="chinese-communication-club-logo.pdf" target="_blank">Chinese Communication Club Logo</a></li>
+        <li><a href="project-stress-commnication-club.pdf" target="_blank">Stress Communication Club Project</a></li>
+      </ul>
+    </div>
+    </section>
 
-header ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
 
-header ul li {
-    padding: 10px 10px;
-}
+    <!--Experience-->
+    <section id="Experience" class="container">
+      <h2>Experience</h2>
+      <h3>LA Fitness, Everett, WA, USA | Gym Staff - Front Desk</h3>
+      <p><em>March 2023 - Present</em></p>
+      <ul>
+        <li>Welcome and assisted members and guests professionally.</li>
+        <li>Demonstrated products to drive engagement and understanding.</li>
+        <li>Processed transactions using POS and cash register systems.</li>
+        <li>Managed cash handling with accuracy and adherence to procedures.</li>
+        <li>Collaborated with team to meet sales targets and improve service.</li>
+        <li>Answered phone calls, scheduled appointments, and managed membership subscriptions efficiently.</li>
+      </ul>
 
-.container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
-    margin: auto;
-}
+      <h3>Pho Tic Tac, Shoreline, WA, USA | Restaurant Server</h3>
+      <p><em>December 2024 - February 2025</em></p>
+      <ul>
+        <li>Delivered personalized service by engaging with guests and making tailored recommendations.</li>
+        <li>Resolved customer concerns quickly to ensure a positive dining experience.</li>
+        <li>Processed orders and payments accurately while addressing menu inquiries.</li>
+      </ul>
 
-.banner {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    border-bottom: var(--border);
-    padding-bottom: 50px;
-    gap: 20px;
-}
+      <h3>Cascadia College, Bothell, WA, USA | Assistant for Orientation</h3>
+      <p><em>June 2023 - September 2024</em></p>
+      <ul>
+        <li>Translated between English and Vietnamese to support new student communication.</li>
+        <li>Guided attendees and answered questions to facilitate a seamless orientation experience.</li>
+      </ul>
 
-.banner .content {
-    text-align: justify;
-    padding-right: 50px;
-}
+      <h3>Cascadia College, Bothell, WA, USA | Graphic Design Promotion for Chinese Communication Club</h3>
+      <p><em>February 2023 - May 2023</em></p>
+      <ul>
+        <li>Processed Created promotional materials using Canva and Photoshop to boost event visibility.</li>
+        <li>Developed branding strategies to drive engagement and outreach.</li>
+        <li>Collaborated on visually cohesive content aligned with event themes and club goals.</li>
+      </ul>
 
-.banner .content h1 {
-    font-size: 2.5em;
-    margin: 0;
-    text-align: left;
-}
+      <h3>Cascadia College, Bothell, WA, USA | Event & Marketing Coordinator</h3>
+      <p><em>September 2022 - January 2023</em></p>
+      <ul>
+        <li>Organized and executed film screenings, cultural events, and speaker series to drive student engagement.</li>
+        <li>Designed marketing materials and led social media campaigns to expand audience reach.</li>
+        <li>Managed logistics, talent coordination, and production planning for seamless event delivery.</li>
+      </ul>
 
-.gradientText {
-    display: inline-block;
-    background-image: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+      <h3>Kimbercroft Childcare & Learning Center, Scraborough, ON, Canada | Childcare Supervisor (Volunteer)</h3>
+      <p><em>December 2021 - February 2022</em></p>
+      <ul>
+        <li>Led recreational and educational activities to promote child development and engagement.</li>
+        <li>Fostered a safe, inclusive environment that encouraged teamwork and social growth.</li>
+      </ul>
+    </section>
 
-.job {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #000000;
-}
+    <!--Education-->
+    <section id="Education" class="container">
+        <h2>Education</h2>
+        <h3><strong>Cascadia College, Bothell, WA, USA </strong>| Associate of Computer Science & Business</h3>
+        <p><em>Expected Graduation: June 2025</em></p>
+        <h3><strong>John Polanyi Collegiate Institute </strong>| Highschool Diploma</h3>
+        <p><em>December 2019 - June 2022</em></p>
+    </section>
 
-.job::after {
-    content: '|';
-    color: black;
-    animation: blink 1s step-start infinite;
-}
+    <!--Future Goal-->
+    <section id="Future-Goal" class="container">
+        <h2>Future Goal</h2>
+        <p>My goal is to build a career at the intersection of technology, business, and communication. 
+          I aim to become a professional who not only understands how systems work,
+          but also how to connect with people, lead projects, and create meaningful user experiences. In
+          the near future, I plan to continue developing my skills in software development,
+          digital design, and cross-cultural communication, while gaining real-world experience through internships 
+          and collaborative projects. Long term, 
+          I hope to work in a role where I can contribute to tech-driven solutions that help communities,
+          especially in multicultural and global contexts.
+        </p>
+    </section>
 
-.cursor {
-    display: inline-block;
-    font-weight: 700;
-    color: black;
-    animation: blink 1s step-start infinite;
-}
+    <!--Contact-->
+    <section id="Contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: hualongthinh@gmail.com</p>
+        <p>Phone: +1 (425)-364-1123</p>
+        <a href="https://www.linkedin.com/in/thinhhua1028" target="_blank"
+        style="display: inline-block; background-color: #89CFF0; color: #000000;
+               padding: 10px 16px; border-radius: 8px; text-decoration: none;
+               font-weight: 600; margin-top: 10px;">
+       🔗 Visit My LinkedIn
+        </a>
+    </section>
 
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-/* CONTACT SECTION */
-.find {
-    margin-top: 50px;
-}
-
-.find ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
-    flex-wrap: nowrap;
-}
-
-.find ul li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    background-color: #eaecee;
-    color: #3c3e41;
-    font-size: 13px;
-    transition: 0.3s;
-    height: 45px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex: 1;
-    width: fit-content;
-}
-
-.find ul li a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: inherit;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 0 10px;
-}
-
-.find ul li a span {
-    padding-right: 10px;
-    font-size: 13px;
-}
-
-.find ul li:hover {
-    background-image: var(--gradient);
-    color: #fff;
-    cursor: pointer;
-}
-
-.find ul li:hover a {
-    color: #fff;
-}
-
-.find ul li.linkedin-icon,
-.find ul li.call {
-    width: fit-content;
-}
-
-.find ul li.mail-icon {
-    min-width: 200px;
-}
-
-/* WHY HIRE ME Section */
-#why-hire ul li {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
-    border-radius: 12px;
-    box-shadow: var(--box-shadow);
-    background-color: #eaecee;
-    color: #3c3e41;
-    font-weight: 500;
-    width: fit-content;
-    transition: 0.3s;
-}
-
-#why-hire ul li a {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #3c3e41;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-#why-hire ul li:hover {
-    background-image: var(--gradient);
-    color: #fff;
-    cursor: pointer;
-}
-
-#why-hire ul li:hover a {
-    color: #fff;
-}
-
-/* Resume button container alignment */
-.resume-button {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 20px;
-}
-
-.resume-button ul {
-    padding: 0;
-    margin: 0;
-}
-
-/* Academic & Avatar Layout */
-#academic .content,
-#why-hire .content {
-    width: 100%;
-    text-align: justify;
-    padding-right: 50px;
-}
-
-.banner .avatar {
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-.banner .avatar img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
-.banner .before {
-    position: absolute;
-    width: 90%;
-    height: 80%;
-    box-shadow: var(--box-shadow);
-    content: '';
-    bottom: 0;
-    z-index: -1;
-}
-
-/* Hidden menu items initially */
-header input,
-header .navDiv,
-header ul label {
-    display: none;
-}
-
-/* Tablet View */
-@media screen and (max-width: 1024px) {
-    .banner .content h1 {
-        font-size: 2em;
-    }
-
-    .container {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-
-    .banner {
-        grid-template-columns: 1fr;
-    }
-
-    .banner .content {
-        padding-right: 0;
-    }
-
-    .banner .avatar {
-        grid-row-start: 1;
-    }
-}
-
-/* Mobile View */
-@media screen and (max-width: 767px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header ul.nav {
+    <!--Scroll to top-->
+    <a 
+      href="#" 
+      onclick="scrollToTop(event)" 
+      style="
         position: fixed;
-        background-color: #F0F3F5;
-        width: 70%;
-        height: 100vh;
-        left: 0;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(9, 70px);
-        margin: 0;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 999;
-        padding: 20px;
-    }
+        bottom: 30px;
+        right: 30px;
+        background-color: #89CFF0;
+        color: #2c3e50;
+        padding: 10px 16px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      "
+    >
+      ↑
+    </a>
 
-    input#menu:checked ~ ul.nav {
-        transform: translateX(0);
-    }
+    <!--ADDED toggle functionality -->
+    <script>
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
 
-    header .navDiv {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
+      const toggleBtn = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
 
-    header label {
-        width: 50px;
-        height: 50px;
-        box-shadow: var(--box-shadow);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+      toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
 
-    .banner {
-        grid-template-columns: 1fr;
-    }
+      function toggleProjects(button) {
+      const projectDiv = document.getElementById("projects");
+      const isVisible = projectDiv.style.display === "block";
 
-    .banner .content {
-        padding-right: 0;
-    }
-
-    .banner .avatar {
-        grid-row-start: 1;
-    }
-
-    .find ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .find ul li {
-        width: 100% !important;
-        justify-content: center;
-    }
-
-    .find ul li a {
-        justify-content: center;
-    }
-}
+      projectDiv.style.display = isVisible ? "none" : "block";
+      button.innerText = isVisible ? "📁 Click Here to View My Projects" : "📂 Click Here to Hide My Projects";
+      }
+    </script>
+</body>
+</html>
