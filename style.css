@@ -1,173 +1,261 @@
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: black;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --border: 1px solid #dce1e4;
+    --gradient: linear-gradient(-45deg, #D000F7, #24BAE3);
+    --box-shadow: 5px 5px 15px #c1c8d3, -5px -5px 15px #fff;
 }
 
-.container {
-  width: 80%;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaecee;
+    color: #3c3e41;
+    margin: 0;
+    font-size: 15px;
+}
+
+a {
+    color: #3c3e41;
+    text-decoration: none;
 }
 
 header {
-  background-color: #89CFF0;
-  color: #2c3e50;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
+    padding: 10px;
+    width: calc(100% - 20px);
+    border-bottom: var(--border);
+    display: grid;
+    grid-template-columns: 30% 70%;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 28px;
-  color: black;
+header .Logo img {
+    height: 50px;
 }
 
-#menu-toggle {
-  background: none;
-  border: none;
-  color: black;
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  margin-top: 10px;
-  display: none;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 0;
-  list-style: none;
-  margin-top: 10px;
-}
-
-.nav-links li a {
-  color: black;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-h2 {
-  color: black;
-  border-bottom: 2px solid black;
-  padding-bottom: 5px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-p, ul {
-  line-height: 1.6;
-}
-
-/* === Buttons === */
-.download-button {
-  display: inline-block;
-  background-color: #89CFF0;
-  color: black;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  font-family: inherit;
-  line-height: 1.4;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.download-button:hover {
-  background-color: #63bce8;
-}
-
-.download-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #007acc;
-}
-
-.button-row {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-/* === LinkedIn Button === */
-.linkedin-button {
-  display: inline-block;
-  background-color: #89CFF0;
-  color: black;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-/* === Scroll to Top === */
-.scroll-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #89CFF0;
-  color: #2c3e50;
-  padding: 10px 16px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-}
-
-/* === Project List === */
-.projects ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 10px;
-}
-
-.projects li {
-  margin: 6px 0;
-}
-
-.projects a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.projects a:hover {
-  text-decoration: underline;
-}
-
-/* === Responsive Nav === */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 10px;
-  }
-
-  .nav-links.show {
+header ul {
+    padding: 0;
+    list-style: none;
     display: flex;
-  }
+    justify-content: end;
+    align-items: center;
+}
+
+header ul li {
+    padding: 10px 10px;
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border-bottom: var(--border);
+    padding-bottom: 50px;
+}
+
+.banner .content {
+    text-align: justify;
+    padding-right: 50px;
+}
+
+.banner .content h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-align: left;
+}
+
+.gradientText {
+    display: inline-block;
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.job {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #000000;
+}
+
+.job::after {
+    content: '|';
+    color: black;
+    animation: blink 1s step-start infinite;
+}
+
+.cursor {
+    display: inline-block;
+    font-weight: 700;
+    color: black;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* CONTACT SECTION */
+.find {
+    margin-top: 50px;
+}
+
+.find ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.find ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: #eaecee;
+    color: #3c3e41;
+    font-size: 13px;
+    transition: 0.3s;
+    height: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    width: fit-content;
+}
+
+.find ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.find ul li a span {
+    padding-right: 10px;
+    font-size: 13px;
+}
+
+.find ul li:hover {
+    background-image: var(--gradient);
+    color: #fff;
+    cursor: pointer;
+}
+
+.find ul li:hover a {
+    color: #fff;
+}
+
+.find ul li.linkedin-icon,
+.find ul li.call {
+    width: fit-content;
+}
+
+.find ul li.mail-icon {
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .find ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .find ul li {
+        width: 100% !important;
+        justify-content: center;
+    }
+
+    .find ul li a {
+        justify-content: center;
+    }
+}
+
+/* WHY HIRE ME Section */
+#why-hire ul li {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    background-color: #eaecee;
+    color: #3c3e41;
+    font-weight: 500;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+#why-hire ul li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #3c3e41;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#why-hire ul li:hover {
+    background-image: var(--gradient);
+    color: #fff;
+    cursor: pointer;
+}
+
+#why-hire ul li:hover a {
+    color: #fff;
+}
+
+/* Resume button container alignment */
+.resume-button {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.resume-button ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Academic & Avatar Layout */
+#academic .content,
+#why-hire .content {
+    width: 100%;
+    text-align: justify;
+    padding-right: 50px;
+}
+
+.banner .avatar {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.banner .avatar img {
+    width: 90%;
+}
+
+.banner .before {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    box-shadow: var(--box-shadow);
+    content: '';
+    bottom: 0;
+    z-index: -1;
 }
