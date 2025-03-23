@@ -12,16 +12,13 @@
         <div class="logo">
             <img src="image/logo.png" alt="" width="90" height="90">
         </div>
-        <div class="navDiv">
-            <label for="menu">
+        <div class="navDiv" id="menuBtn">
                 <i class="fa-solid fa-bars"></i>
-            </label>
         </div>
-        <input type="checkbox" id="menu">
-        <ul class="nav">
-            <label for="menu">
+        <ul class="nav" id="navMenu">
+            <div class="closeBtn" id="closeNav">
                 <i class="fa-solid fa-xmark"></i>
-            </label>
+            </div>
             <li><a href="">Home</a></li>
             <li><a href="#academic">Academic Journey</a></li>
             <li><a href="#why-hire">Why Hire Me?</a></li>
@@ -193,6 +190,18 @@
     </a>
 
     <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        const closeNav = document.getElementById('closeNav');
+
+        menuBtn.addEventListener('click', () => {
+        navMenu.classList.add('open');
+        });
+
+        closeNav.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        });
+
         function scrollToTop(event) {
         event.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -202,6 +211,7 @@
         const cursor = document.querySelector('.cursor');
         const text = '{Computer Science.}';
         let charIndex = 0;
+        
     
         function typeEffect() {
             if (charIndex <= text.length) {
