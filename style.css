@@ -176,11 +176,20 @@ header ul.nav li {
     font-weight: 500;
     text-decoration: none;
     padding: 0 10px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .find ul li a span {
     padding-right: 10px;
     font-size: 13px;
+    flex: 1;
+    word-break: break-word;
+}
+
+.find ul li span {
+    flex: 1;
+    word-break: break-word;
 }
 
 .find ul li:hover {
@@ -272,7 +281,6 @@ header ul.nav li {
     bottom: 0;
     z-index: -1;
 }
-
 
 /* Projects */
 .listProject {
@@ -404,13 +412,29 @@ header ul.nav li {
         justify-content: center;
     }
 
+    /* 🔧 UPDATED: Tablet contact icon layout */
     .find ul li {
         width: 100% !important;
-        justify-content: center;
+        max-width: 100%;
+        min-width: unset;
+        justify-content: space-between;
+        font-size: 16px;
+        height: 55px;
+        padding: 14px 24px;
     }
 
-    .find ul li a {
-        justify-content: center;
+    .find ul li i {
+        font-size: 20px;
+        flex-shrink: 0;
+    }
+
+    .find ul li a,
+    .find ul li a span,
+    .find ul li span {
+        font-size: 15px;
+        flex: 1;
+        word-break: break-word;
+        justify-content: space-between;
     }
 }
 
@@ -453,5 +477,29 @@ header ul.nav li {
 
     .listProject .item iframe {
         height: 160px;
+    }
+
+    /* 🔧 UPDATED: Mobile contact icon layout */
+    .find ul li {
+        font-size: 18px;
+        height: 60px;
+        padding: 16px 26px;
+        width: 100% !important;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+
+    .find ul li i {
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+
+    .find ul li a,
+    .find ul li a span,
+    .find ul li span {
+        font-size: 16px;
+        flex: 1;
+        word-break: break-word;
+        justify-content: space-between;
     }
 }
