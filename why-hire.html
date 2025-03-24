@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Academic Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header> 
+        <div class="logo">
+            <img src="image/logo.png" alt="" width="90" height="90">
+        </div>
+        <div class="navDiv" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav" id="navMenu">
+            <div class="closeBtn" id="closeNav">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="academic.html">Academic Journey</a></li>
+            <li><a href="why-hire.html">Why Hire Me?</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    
+    <!-- WHY HIRE ME -->
+     <div class="banner" id="why-hire">
+        <div class="content">
+            <h3>WHY HIRE ME ?</h3>
+            <p><u>Technically Proficient:</u> Knowledgeable in Java, Python, HTML, Adobe Photoshop, and Canva.</p>
+            <p><u>Versatile Skill Set:</u> Equipped with experience in customer service, event coordination, graphic design, and basic programming.</p>
+            <p><u>Strong Communicator:</u> Successfully guided new students, resolved customer concerns, and collaborated with teams to achieve shared goals.</p>
+            <p><u>Bilingual & Culturally Aware:</u> Fluent in English and Vietnamese, skilled in cross-cultural communication.</p>
+            <div class="resume-button">
+            <ul>
+                <li>
+                    <a href="ThinhHuaResume.pdf" download>
+                    <i class="fa-solid fa-file"></i>
+                    <span>Click Here to Download My Resume</span>
+                    </a>
+                </li>
+            </ul>
+            </div>
+
+            <h2>Future Goal</h2>
+        <p>My goal is to build a career at the intersection of technology, business, and communication. 
+          I aim to become a professional who not only understands how systems work,
+          but also how to connect with people, lead projects, and create meaningful user experiences. In
+          the near future, I plan to continue developing my skills in software development,
+          digital design, and cross-cultural communication, while gaining real-world experience through internships 
+          and collaborative projects. Long term, 
+          I hope to work in a role where I can contribute to tech-driven solutions that help communities,
+          especially in multicultural and global contexts.
+        </p>
+        </div>
+    </div>
+
+    <a 
+      href="#" 
+      onclick="scrollToTop(event)" 
+      style="
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #eaecee;
+        color: #000000;
+        padding: 10px 16px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      "
+    >
+    <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        const closeNav = document.getElementById('closeNav');
+
+        menuBtn.addEventListener('click', () => {
+        navMenu.classList.add('open');
+        });
+
+        closeNav.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        });
+
+        function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        const job = document.querySelector('.job');
+        const cursor = document.querySelector('.cursor');
+        const text = '{Computer Science.}';
+        let charIndex = 0;
+        
+    
+        function typeEffect() {
+            if (charIndex <= text.length) {
+                job.textContent = text.substring(0, charIndex);
+                charIndex++;
+                setTimeout(typeEffect, 100);
+            } else {
+                cursor.style.display = "none";
+            }
+        }
+        typeEffect();
+    </script>
+</body>
+</html>
