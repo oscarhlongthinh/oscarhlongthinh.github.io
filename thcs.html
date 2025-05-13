@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header> 
+        <div class="logo">
+            <img src="image/logo.png" alt="" width="90" height="90">
+        </div>
+        <div class="navDiv" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav" id="navMenu">
+            <div class="closeBtn" id="closeNav">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="academic.html">Academic Journey</a></li>
+            <li><a href="why-hire.html">Why Hire Me?</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="banner">
+        <div class="content">
+            <h3>Where My Passion for Technology Began</h3>
+            <p  style="margin-bottom: -5px;">
+              In 2018, I had the chance to compete in the Robotacon WRO Vietnam, a national robotics competition co-hosted by Samsung and LEGO Education. 
+              Although my team only made it to the city-level round, the experience was a turning point. It was the first time I wrote code, built a robot, and saw how technology could solve real-world problems. 
+              Later that same year, I earned a B prize in another local tech competition, which gave me more confidence and motivation to keep learning. 
+              These early achievements sparked my passion for programming and led me to explore web development and software design, eventually shaping my academic and career path in tech.
+            </p>
+
+            <div class="banner" id="why-hire" style="margin-bottom: -120px;">
+                <div class="content">
+                    <div class="resume-button">
+                        <ul>
+                            <li>
+                                <a href="project.html" >
+                                    <i class="fa-solid fa-computer-mouse"></i>
+                                    <span>See More Projects </span>
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="avatar" style="position: relative; display: inline-block;">
+      <img src="image/robo1.png" alt="" style="max-width: 300px; margin-bottom: 20px;">
+      <img src="image/robo2.png" alt="" style="max-width: 300px; margin-bottom: 20px;">
+      <img src="image/robo3.png" alt="" style="max-width: 300px;">
+  </div>
+
+    <a 
+      href="#" 
+      onclick="scrollToTop(event)" 
+      style="
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #eaecee;
+        color: #000000;
+        padding: 10px 16px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      "
+    >
+    <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        const closeNav = document.getElementById('closeNav');
+
+        menuBtn.addEventListener('click', () => {
+        navMenu.classList.add('open');
+        });
+
+        closeNav.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        });
+
+        function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        const job = document.querySelector('.job');
+        const cursor = document.querySelector('.cursor');
+        const text = '{Computer Science.}';
+        let charIndex = 0;
+        
+    
+        function typeEffect() {
+            if (charIndex <= text.length) {
+                job.textContent = text.substring(0, charIndex);
+                charIndex++;
+                setTimeout(typeEffect, 100);
+            } else {
+                cursor.style.display = "none";
+            }
+        }
+        typeEffect();
+    </script>
+</body>
+</html>
