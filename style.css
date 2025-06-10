@@ -1,558 +1,214 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
-:root {
-    --border: 1px solid #dce1e4;
-    --gradient: linear-gradient(-45deg, #D000F7, #24BAE3);
-    --box-shadow: 5px 5px 15px #c1c8d3, -5px -5px 15px #fff;
-    --side-padding: 20px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #eaecee;
-    color: #3c3e41;
-    margin: 0;
-    font-size: 15px;
-}
-
-a {
-    color: #3c3e41;
-    text-decoration: none;
-}
-
-h1, h3, p {
-    margin-left: 0;
-    padding-left: 0;
-    text-align: left;
-}
-
-section > .content,
-.find,
-#projects .project {
-    padding-left: var(--side-padding);
-    padding-right: var(--side-padding);
-}
-
-/* Header */
-header {
-    padding: 10px;
-    width: calc(100% - 20px);
-    border-bottom: var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-header ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 15px;
-}
-
-header ul.nav {
-    display: flex;
-}
-
-header ul.nav li {
-    padding: 10px 10px;
-}
-
-.navDiv {
-    display: none;
-}
-
-.closeBtn {
-    display: none;
-}
-
-/* Container */
-.container {
-    width: 100%;
-    max-width: 100%;
-    margin: auto;
-}
-
-/* Banner */
-.banner {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    border-bottom: var(--border);
-    padding-bottom: 50px;
-    gap: 20px;
-}
-
-.banner .content {
-    text-align: justify;
-    padding-right: 50px;
-    padding-left: var(--side-padding);
-}
-
-.banner .content h1 {
-    font-size: 2.5em;
-    margin: 0;
-    text-align: left;
-}
-
-.gradientText {
-    display: inline-block;
-    background-image: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.job {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #000000;
-}
-
-.job::after {
-    content: '|';
-    color: black;
-    animation: blink 1s step-start infinite;
-}
-
-.cursor {
-    display: inline-block;
-    font-weight: 700;
-    color: black;
-    animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-/* Contact */
-.find {
-    margin-top: 50px;
-}
-
-.find ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
-    flex-wrap: nowrap;
-}
-
-.find ul li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    background-color: #eaecee;
-    color: #3c3e41;
-    font-size: 13px;
-    transition: 0.3s;
-    height: 45px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex: 1;
-    width: fit-content;
-}
-
-.find ul li a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: inherit;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 0 10px;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.find ul li a span {
-    padding-right: 10px;
-    font-size: 13px;
-    flex: 1;
-    word-break: break-word;
-}
-
-.find ul li span {
-    flex: 1;
-    word-break: break-word;
-}
-
-.find ul li:hover {
-    background-image: var(--gradient);
-    color: #fff;
-    cursor: pointer;
-}
-
-.find ul li:hover a {
-    color: #fff;
-}
-
-.find ul li.linkedin-icon,
-.find ul li.call {
-    width: fit-content;
-}
-
-.find ul li.mail-icon {
-    min-width: 200px;
-}
-
-/* Why Hire Me */
-#why-hire ul li {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
-    border-radius: 12px;
-    box-shadow: var(--box-shadow);
-    background-color: #eaecee;
-    color: #3c3e41;
-    font-weight: 500;
-    width: fit-content;
-    transition: 0.3s;
-}
-
-#why-hire ul li a {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #3c3e41;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-#why-hire ul li:hover {
-    background-image: var(--gradient);
-    color: #fff;
-    cursor: pointer;
-}
-
-#why-hire ul li:hover a {
-    color: #fff;
-}
-
-/* Resume Button */
-.resume-button {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 20px;
-}
-
-.resume-button ul {
-    padding: 0;
-    margin: 0;
-}
-
-/* Avatar */
-.banner .avatar {
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-.banner .avatar img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
-.banner .before {
-    position: absolute;
-    width: 90%;
-    height: 80%;
-    box-shadow: var(--box-shadow);
-    content: '';
-    bottom: 0;
-    z-index: -1;
-}
-
-/* Projects */
-.listProject {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    border-bottom: var(--border);
-    padding-bottom: 50px;
-    margin-top: 50px;
-    padding-left: var(--side-padding);
-    padding-right: var(--side-padding);
-}
-
-.listProject .item {
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.listProject .item iframe {
-    width: 100%;
-    height: 280px;
-    border-radius: 10px;
-    border: none;
-}
-
-.listProject .item .name {
-    padding-top: 10px;
-    font-size: 1.1em;
-}
-
-/* Responsive Adjustments */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .banner .content h1 {
-        font-size: 1.8em;
-        line-height: 1.3;
-    }
-
-    .listProject {
-        grid-template-columns: 1fr 1fr;
-        padding: 0 var(--side-padding) 40px var(--side-padding);
-        margin-top: 30px;
-        gap: 20px;
-    }
-
-    .listProject .item iframe {
-        height: 200px;
-    }
-
-    .listProject .item {
-        height: auto;
-        font-size: 15px;
-        padding: 16px;
-    }
-}
-
-/* CALCULATOR */
-.calculator-container { 
-    width: 100%;
-    height: 100vh;
-    background: #eaecee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.calculator {
-    background: #000000;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.calculator form input {
-    border: 0;
-    outline: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
-                5px 5px 15px rgba(0, 0, 0, 0.2);
-    background: transparent;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    margin: 10px;
-}
-
-form .display {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0;
-}
-
-form .display input {
-    text-align: right;
-    flex: 1;
-    font-size: 45px;
-    box-shadow: none;
-}
-
-form input.equal {
-    width: 145px;
-}
-
-form input.operator {
-    color: #33ffd8;
-}
-
-
-@media screen and (max-width: 1024px) {
-    header .navDiv {
-        display: flex;
-        font-size: 24px;
-        cursor: pointer;
-        z-index: 1001;
-    }
-
-    header ul.nav {
-        position: fixed;
-        background-color: #F0F3F5;
-        width: 70%;
-        height: 100vh;
-        left: 0;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 10px;
-        margin: 0;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 1000;
-        padding: 20px;
-        overflow-y: auto;
-    }
-
-    header ul.nav.open {
-        transform: translateX(0);
-    }
-
-    .closeBtn {
-        display: block;
-        justify-self: end;
-        font-size: 20px;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
-
-    header ul.nav li a {
-        font-size: 14px;
-    }
-
-    header ul.nav {
-        display: none;
-    }
-
-    header ul.nav.open {
-        display: grid;
-    }
-
-    .banner {
-        grid-template-columns: 1fr;
-    }
-
-    .banner .content {
-        padding-right: 20px;
-        padding-left: var(--side-padding);
-    }
-
-    .banner .avatar {
-        grid-row-start: 1;
-    }
-
-    .find ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* 🔧 UPDATED: Tablet contact icon layout */
-    .find ul li {
-        width: 100% !important;
-        max-width: 100%;
-        min-width: unset;
-        justify-content: space-between;
-        font-size: 16px;
-        height: 55px;
-        padding: 14px 24px;
-    }
-
-    .find ul li i {
-        font-size: 20px;
-        flex-shrink: 0;
-    }
-
-    .find ul li a,
-    .find ul li a span,
-    .find ul li span {
-        font-size: 15px;
-        flex: 1;
-        word-break: break-word;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .banner .content,
-    #academic .content,
-    #why-hire .content,
-    #projects .content,
-    #find {
-        margin-left: -10px;
-    }
-
-    .banner .content h1 {
-        font-size: 1.6em;
-        line-height: 1.3;
-    }
-
-    .listProject {
-        grid-template-columns: 1fr;
-        padding: 0 var(--side-padding) 40px var(--side-padding);
-        margin-top: 30px;
-        gap: 20px;
-    }
-
-    .listProject .item iframe {
-        height: 200px;
-    }
-
-    .listProject .item {
-        height: auto;
-        font-size: 15px;
-        padding: 16px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .banner .content h1 {
-        font-size: 1.4em;
-    }
-
-    .listProject .item iframe {
-        height: 160px;
-    }
-
-    /* 🔧 UPDATED: Mobile contact icon layout */
-    .find ul li {
-        font-size: 18px;
-        height: 60px;
-        padding: 16px 26px;
-        width: 100% !important;
-        max-width: 100%;
-        justify-content: space-between;
-    }
-
-    .find ul li i {
-        font-size: 22px;
-        flex-shrink: 0;
-    }
-
-    .find ul li a,
-    .find ul li a span,
-    .find ul li span {
-        font-size: 16px;
-        flex: 1;
-        word-break: break-word;
-        justify-content: space-between;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinh Hua Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="image/avatar.png" style="width: 100px; height: 100px;">
+        </div>
+       <div class="navDiv">
+        <label for="menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+       </div>
+        <input type="checkbox" id="menu">
+        <ul class="nav">
+            
+            <label for="menu">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="banner" id="home">
+            <div class="content">
+              <p>WELCOME TO MY PORTFOLIO</p>
+              <h1>
+                Thinh Long Hua is <br/>
+                studying
+                <div class="gradientText">
+                  <div class="job"
+                  data-job1="{CS.}"
+                  data-job2="{UX/UI.}">
+                  </div>
+                </div>
+              </h1>
+              <p>
+                Hi, my name is Thinh (Oscar) Hua, 
+                and I’ve been passionate about technology and design since I was 13, 
+                when I competed in the Robotacon WRO competition back in Vietnam. 
+                That experience sparked my curiosity in programming, 
+                which has since grown into a love for building websites, 
+                creating digital experiences, and solving real-world problems with code and design.
+              </p>
+
+              <div class="find">
+                <h3>CONTACT WITH ME</h3>
+                <ul>
+                  <li>
+                    <a href="https://www.linkedin.com/in/thinhhua1028/">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:hualongthinh@gmail.com">
+                      <i class="fa-solid fa-envelope"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+14253641123">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/oscarhlongthinh">
+                      <i class="fa-brands fa-square-github"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            
+            </div>
+            <div class="avatar">
+                <img src="image/grad.png" alt="">
+            </div>
+        </div>
+
+        <div id="skill">
+          <h1 class="title">SKILL</h1>
+          <div class="listSkill">
+            <div class="item">
+              <div class="name">Java</div>
+              <div class="evaluate"
+                    style="--point: 70%"></div>
+            </div>
+    
+            <div class="item">
+              <div class="name">HTML & CSS</div>
+              <div class="evaluate"
+                    style="--point: 65%"></div>
+            </div>
+    
+            <div class="item">
+              <div class="name">Python</div>
+              <div class="evaluate"
+                    style="--point: 50%"></div>
+            </div>
+    
+            <div class="item">
+              <div class="name">Adobe Phototshop</div>
+              <div class="evaluate"
+                    style="--point: 60%"></div>
+            </div>
+            
+            <div class="item">
+              <div class="name">Canva</div>
+              <div class="evaluate"
+                    style="--point: 90%"></div>
+            </div>
+    
+            <div class="item">
+              <div class="name">Microsoft Office 365</div>
+              <div class="evaluate"
+                    style="--point: 95%"></div>
+            </div>
+    
+            <div class="item">
+              <div class="name">G-Suite</div>
+              <div class="evaluate"
+                    style="--point: 95%"></div>
+            </div>
+    
+            <div class="item">
+              <div class="name">FDMT & CRM Systems</div>
+              <div class="evaluate"
+                    style="--point: 95%"></div>
+            </div>
+    
+            <div class="item">
+              <div class="name">Windows 10 & macOS</div>
+              <div class="evaluate"
+                    style="--point: 95%"></div>
+            </div>
+    
+            <div class="item">
+              <div class="name">IOS & Android</div>
+              <div class="evaluate"
+                    style="--point: 95%"></div>
+            </div>
+          </div>
+        </div>
+
+       <div id="project">
+            <h1 class="title">PROJECT</h1>
+            <div class="listProject">
+                <div class="item">
+                    <img src="image/cccLogo.jpg" alt="">
+                    <div class="name">
+                      Chinese Communication Club's Logo
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/cccPoster.jpg" alt="">
+                    <div class="name">
+                      Chinese Communication Club's Poster for first meet
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/cccXiP.jpg" alt="">
+                    <div class="name">
+                      Boba Talk by Chinese Communication Club and International Office
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/sss.jpg" alt="">
+                    <div class="name">
+                        Stress Communication Club
+                    </div>
+                </div>
+              </div>
+            </div>
+       </div>
+       <div id="contact">
+        <h1 class="title">Contact</h1>
+        <ul class="contact">
+          <li>
+            <a href="https://www.linkedin.com/in/thinhhua1028/">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hualongthinh@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+14253641123">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/oscarhlongthinh">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+          </li>
+        </ul>
+       </div>
+    </div>
+    
+</body>
+</html>
