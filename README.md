@@ -17,15 +17,16 @@ This is a responsive personal website built using HTML, CSS, and Font Awesome, d
 📱 Fully responsive across mobile, tablet, and desktop
 
 # 🧪 Technologies Used
-HTML5
 
-CSS3
+- HTML5
 
-Font Awesome for icons
+- CSS
 
-Responsive design using media queries
+- Font Awesome for icons
 
-CSS custom properties (:root + --variables)
+- Responsive design using media queries
+
+- CSS custom properties (:root + --variables)
 
 Animation with @keyframes
 
