@@ -31,26 +31,12 @@ Animation with @keyframes
 
 # 🖼️ Highlighted Projects
 1. Chinese Communication Club
-Role: Graphic Designer
-
-Tools: Canva, Photoshop
-
-Contribution: Designed logo, poster, and improved event branding.
-
+   
 2. Stress Communication Club Flyer
-Focus: Visual storytelling for mental health awareness
-
-Result: Increased student engagement with clean, warm visuals.
 
 3. Mini Paint App
-Built With: Java (Khan Academy)
-
-Features: Color selection, pen sizes, stamp shapes
 
 4. Marvel Database
-Built With: SQL
-
-Focus: Analyzing character data using complex queries
 
 # 📱 Responsive Design
 
