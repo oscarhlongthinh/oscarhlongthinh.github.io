@@ -1,4 +1,18 @@
-# oscarhlongthinh.github.io
+# 🌐 Thinh Long Hua's Personal Portfolio Website
 
-This website is a personal portfolio I designed and built from scratch using HTML, CSS, and responsive design techniques. I focused on creating a clean, modern interface that showcases my skills, projects, and background in both computer science and UX/UI design. I used animations, a mobile-friendly layout, and visual elements created with tools like Canva and Photoshop to deliver a professional and engaging user experience.
+This is a responsive personal website built using HTML, CSS, and Font Awesome, designed to showcase my skills, projects, and background in a visually engaging format.
+
+# 📋 Features
+
+🧑‍🎓 About Me section introducing my academic and professional journey
+
+💼 Skills chart visualizing proficiency in tools like Java, HTML/CSS, Python, Canva, Photoshop, etc.
+
+🖼️ Project Showcase with images and descriptions of featured work
+
+📞 Contact Section with LinkedIn, GitHub, Email, and Phone links
+
+🎨 Gradient text animation and interactive hover effects
+
+📱 Fully responsive across mobile, tablet, and desktop
 
